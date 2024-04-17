@@ -3,7 +3,11 @@ blacklist=$(jq -r '.["package-updater"].black_list[]' package.json)
 echo blacklist $blacklist
 # Get a list of outdated packages
 # outdated=$(npm outdated --json | jq -r 'keys[]')
-outdated=$(yarn outdated --json | jq -r '.data.body[] .[0]')
+# gives error
+# jq: error (at <stdin>:1): Cannot index string with string "body"
+# but it seems to work ???
+outdated=$(yarn outdated --json | jq -r '.data.body[]. [0]')
+
 
 echo outdated $outdated
 # # Loop through the outdated packages
@@ -15,7 +19,8 @@ do
         # Update the package
         echo updating $package
         # npm update $package
-    else 
-        echo $package is in the blacklist
-     fi
+        yarn upgrade $package --latest
+    fi 
 done
+
+echo after for loop
