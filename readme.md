@@ -8,6 +8,16 @@
 
 `yarn update:blacklist`
 
+Dependencies added to the package.json will be not be updated, all other dependencies will be upgraded to their latest version
+
+```json
+  "package-updater": {
+    "black_list": [
+      "react-native-localize"
+    ]
+  },
+```
+
 ## Roadmap
 
 - publish as node package
