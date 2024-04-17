@@ -2,7 +2,8 @@
 
 get_outdated_packages() {
     # Get a list of outdated packages using yarn
-    yarn outdated --json | jq -r '.data.body[][0]'
+    # format is actually json_lines and not json
+    yarn outdated --json | tail -n -1 | jq -r '.data.body[][0]'
 }
 
 get_blacklist() {
