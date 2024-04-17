@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 # Get the blacklist from package.json
 blacklist=$(jq -r '.["package-updater"].black_list[]' package.json)
 echo blacklist $blacklist
@@ -6,7 +9,7 @@ echo blacklist $blacklist
 # yarn gives error
 # jq: error (at <stdin>:1): Cannot index string with string "body"
 # but it seems to work ???
-outdated=$(yarn outdated --json | jq -r ".data.body[]. [0]")
+outdated=$(yarn outdated --json | jq -r '.data.body[]. [0]')
 
 
 echo outdated $outdated
