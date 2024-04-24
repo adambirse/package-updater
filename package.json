@@ -1,17 +1,26 @@
 {
   "name": "@adambirse123/package-updater",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automatically update your package.json dependencies, excluding those explicitly blacklisted.",
-  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"No tests specified\" && exit 0",
-    "script": "node index.js",
-    "update:blacklist": "./update.sh"
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adambirse/package-updater"
+  },
+  "homepage": "https://github.com/adambirse/package-updater#readme",
+  "keywords": [
+    "package",
+    "update",
+    "dependencies",
+    "blacklist",
+    "npm",
+    "yarn"
+  ],
+  "author": "adambirse",
   "license": "ISC"
 }
