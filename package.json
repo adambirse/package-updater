@@ -1,8 +1,11 @@
 {
-  "name": "package-updater",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@adambirse123/package-updater",
+  "version": "1.0.1",
+  "description": "Automatically update your package.json dependencies, excluding those explicitly blacklisted.",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"No tests specified\" && exit 0",
     "script": "node index.js",
@@ -10,15 +13,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "package-updater": {
-    "black_list": [
-      "react-native-localize"
-    ]
-  },
-  "dependencies": {
-    "react": "^15.2.0",
-    "react-native-localize": "^2.0.0",
-    "react-native-svg-transformer": "^1.2.0"
-  }
+  "license": "ISC"
 }

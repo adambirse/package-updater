@@ -6,6 +6,14 @@
 
 ## Usage
 
+1. Add script to your package.json
+
+```
+ "update:blacklist": "./node_modules/@adambirse123/package-updater/update.sh"
+```
+
+2 Execute via via yarn (npm and pnpm not currently supported)
+
 `yarn update:blacklist`
 
 Dependencies added to the package.json will be not be updated, all other dependencies will be upgraded to their latest version
@@ -20,7 +28,6 @@ Dependencies added to the package.json will be not be updated, all other depende
 
 ## Roadmap
 
-- publish as node package
 - support for yarn, npm, pnpm etc
 - fix annoying JQ error when retrieving outdated dependencies with yarn (see update.sh)
 - support for different versions of yarn / npm etc
